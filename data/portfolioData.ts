@@ -42,6 +42,9 @@ export interface AchievementPhoto {
   filePath: string;
 }
 
+const basePath = "/portfolio_new";
+const assetPath = (path: string) => `${basePath}${path}`;
+
 export const portfolioData = {
   personal: {
     fullName: "Sarthak Pawar",
@@ -58,10 +61,10 @@ export const portfolioData = {
     email: "sarthp9191@gmail.com",
     phone: "+91 8080554194",
     location: "Pune, Maharashtra, India",
-    resumeUrl: "/Sarthak_Pawar_resume.pdf",
+    resumeUrl: assetPath("/Sarthak_Pawar_resume.pdf"),
     introduction: `I am Sarthak Pawar, a Computer Science Engineering student, AI developer, and emerging technology leader passionate about building impactful digital solutions. My experience spans full-stack development, artificial intelligence, public relations, research, and hackathon innovation. I have led teams, developed AI-powered applications, published research, and secured patents while maintaining strong academic performance. With expertise in modern web technologies, machine learning, and agentic AI systems, I focus on solving real-world challenges through scalable software. I continuously explore cutting-edge technologies to create products that combine innovation, usability, and measurable impact. Let's connect and build something meaningful together.`,
     aboutMe: `I am a Computer Science Engineering student at Vishwakarma Institute of Technology, Pune, with a strong academic record and a passion for technology-driven problem solving. My work combines AI, full-stack development, system design, and product thinking to create innovative solutions for education, agriculture, healthcare, and productivity. Beyond technical development, I have held leadership and public relations roles where I coordinated events, managed outreach initiatives, and worked closely with diverse teams. My experience includes hackathon-winning projects, research publications, patent filings, and the development of intelligent multi-agent systems. I actively work with modern technologies such as Next.js, FastAPI, LangChain, LangGraph, SQL, and cloud-based AI tools. What differentiates me is my ability to bridge technology, leadership, and communication to transform ideas into impactful real-world solutions.`,
-    profilePhoto: "/profile/profile_photo.jpeg",
+    profilePhoto: assetPath("/profile/profile_photo.jpeg"),
     mission: "To leverage AI and software engineering to solve meaningful societal challenges through scalable technology.",
     vision: "To become a technology leader building innovative AI systems that improve education, healthcare, and agriculture globally."
   },
@@ -135,8 +138,8 @@ export const portfolioData = {
       title: "EduTrack",
       description: "AI-Powered Academic Project Management System helping students and advisors streamline evaluations, track milestones, and co-author research efficiently.",
       longDescription: "EduTrack is an intelligent academic dashboard designed to solve the friction of tracking student projects. It integrates AI milestones, automated evaluation forms, Gantt-style progress tracking, and collaboration panels. Features a robust FastAPI backend and Next.js frontend with system architecture diagrams visualized natively.",
-      image: "/achievements/Edutrack_project.png",
-      architectureImage: "/achievements/Edutrack_system_architecture.png",
+      image: assetPath("/achievements/Edutrack_project.png"),
+      architectureImage: assetPath("/achievements/Edutrack_system_architecture.png"),
       tags: ["Next.js 15", "TypeScript", "FastAPI", "SQL", "Tailwind CSS", "Framer Motion"],
       github: "https://github.com/SARTH9191"
     },
@@ -144,7 +147,7 @@ export const portfolioData = {
       title: "Smart Farming",
       description: "Multi-Agent AI System designed to automate crop monitoring, predict crop disease, analyze soil metrics, and optimize resource delivery via autonomous agents.",
       longDescription: "This project leverages LangGraph and LangChain to deploy multiple specialized AI agents. One agent parses weather APIs, another analyzes satellite/drone images for crop stress, and a coordinator agent generates localized agricultural action plans. Highly scalable architecture tailored for modern precision agriculture.",
-      image: "/certificates/AI_IN-Agricuiture_Patent.jpeg", // Using patent image for visual representation
+      image: assetPath("/certificates/AI_IN-Agricuiture_Patent.jpeg"), // Using patent image for visual representation
       tags: ["Python", "LangChain", "LangGraph", "FastAPI", "PostgreSQL", "Generative AI"],
       github: "https://github.com/SARTH9191"
     },
@@ -152,7 +155,7 @@ export const portfolioData = {
       title: "Caretaker",
       description: "Comprehensive Healthcare Assistance Platform providing real-time patient monitoring, medication reminders, and AI-enabled diagnostics support.",
       longDescription: "Caretaker bridges the gap between doctors and home-bound patients. It features a modern, accessible interface with real-time web sockets for monitoring vital signs, an AI-powered diagnostic helper that summarizes symptoms, and automated notification integrations via SMS and email.",
-      image: "/achievements/caretaker.png",
+      image: assetPath("/achievements/caretaker.png"),
       tags: ["React", "Node.js", "Express", "MongoDB", "WebSockets", "AI Assistant"],
       github: "https://github.com/SARTH9191"
     }
@@ -221,78 +224,78 @@ export const portfolioData = {
     {
       title: "AI in Agriculture Patent Application",
       issuer: "Indian Patent Office",
-      filePath: "/certificates/AI_IN-Agricuiture_Patent.jpeg",
+      filePath: assetPath("/certificates/AI_IN-Agricuiture_Patent.jpeg"),
       isPatent: true,
       type: "patent"
     },
     {
       title: "Tessaract '26 Hackathon Winner",
       issuer: "Tessaract Hackathon",
-      filePath: "/certificates/Tessaract'26_Hackthon_Winner.png",
+      filePath: assetPath("/certificates/Tessaract'26_Hackthon_Winner.png"),
       type: "certificate"
     },
     {
       title: "Generative AI Foundations",
       issuer: "Google Cloud / DeepLearning.AI",
-      filePath: "/certificates/Generative_AI.png",
+      filePath: assetPath("/certificates/Generative_AI.png"),
       type: "certificate"
     },
     {
       title: "Responsive AI & ML Development",
       issuer: "Industry Standard",
-      filePath: "/certificates/Responsive_Ai.png",
+      filePath: assetPath("/certificates/Responsive_Ai.png"),
       type: "certificate"
     },
     {
       title: "Speaker's Club Public Relations Head",
       issuer: "VIT Pune Speakers Club",
-      filePath: "/certificates/speaker's_Club_PR_Head.png",
+      filePath: assetPath("/certificates/speaker's_Club_PR_Head.png"),
       type: "certificate"
     },
     {
       title: "Speaker's Edge Championship",
       issuer: "Speakers Club Elite",
-      filePath: "/certificates/Speakers_Edge.jpeg",
+      filePath: assetPath("/certificates/Speakers_Edge.jpeg"),
       type: "certificate"
     },
     {
       title: "Stock Price Prediction & Analysis",
       issuer: "Finance Tech Org",
-      filePath: "/certificates/stock price pridiction certificate.jpeg",
+      filePath: assetPath("/certificates/stock price pridiction certificate.jpeg"),
       isPatent: true,
       type: "patent"
     },
     {
       title: "Semester 1 Academic Transcript (Year 2)",
       issuer: "VIT Pune University",
-      filePath: "/certificates/Result_2year_sem1.png",
+      filePath: assetPath("/certificates/Result_2year_sem1.png"),
       type: "academic"
     }
   ] as Certificate[],
   achievementsPhotos: [
     {
       title: "Publicity & Outreach Secretary at CSA",
-      filePath: "/achievements/CSA_Publicity&outreach_secratory.jpeg"
+      filePath: assetPath("/achievements/CSA_Publicity&outreach_secratory.jpeg")
     },
     {
       title: "Hackathon Victory at Tessaract '26",
-      filePath: "/achievements/trssarct_Hackthon_winner.jpeg"
+      filePath: assetPath("/achievements/trssarct_Hackthon_winner.jpeg")
     },
     {
       title: "PR Officer Leadership",
-      filePath: "/achievements/PR_officer_speakersclub.jpeg"
+      filePath: assetPath("/achievements/PR_officer_speakersclub.jpeg")
     },
     {
       title: " Speaker at Speaker's Edge",
-      filePath: "/achievements/speakers_edge.jpeg"
+      filePath: assetPath("/achievements/speakers_edge.jpeg")
     },
     {
       title: "Speakers Club PR Head Role",
-      filePath: "/achievements/Speakers_Club_PR_Head.jpeg"
+      filePath: assetPath("/achievements/Speakers_Club_PR_Head.jpeg")
     },
     {
       title: "CSA Event Management Team",
-      filePath: "/achievements/CSA_event_management.jpeg"
+      filePath: assetPath("/achievements/CSA_event_management.jpeg")
     }
   ] as AchievementPhoto[]
 };
