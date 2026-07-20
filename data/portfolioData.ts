@@ -42,7 +42,7 @@ export interface AchievementPhoto {
   filePath: string;
 }
 
-const basePath = "/portfolio_new";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const assetPath = (path: string) => `${basePath}${path}`;
 
 export const portfolioData = {
@@ -231,7 +231,7 @@ export const portfolioData = {
     {
       title: "Tessaract '26 Hackathon Winner",
       issuer: "Tessaract Hackathon",
-      filePath: assetPath("/certificates/Tessaract'26_Hackthon_Winner.png"),
+      filePath: assetPath("/certificates/Tessaract26_Hackthon_Winner.png"),
       type: "certificate"
     },
     {
@@ -249,7 +249,7 @@ export const portfolioData = {
     {
       title: "Speaker's Club Public Relations Head",
       issuer: "VIT Pune Speakers Club",
-      filePath: assetPath("/certificates/speaker's_Club_PR_Head.png"),
+      filePath: assetPath("/certificates/speakers_Club_PR_Head.png"),
       type: "certificate"
     },
     {
@@ -275,15 +275,15 @@ export const portfolioData = {
   achievementsPhotos: [
     {
       title: "Publicity & Outreach Secretary at CSA",
-      filePath: assetPath("/achievements/CSA_Publicity&outreach_secratory.jpeg")
+      filePath: assetPath("/achievements/csa_Publicity_outreach_secratory.jpeg")
     },
     {
       title: "Hackathon Victory at Tessaract '26",
-      filePath: assetPath("/achievements/trssarct_Hackthon_winner.jpeg")
+      filePath: assetPath("/achievements/tessaract_Hackthon_winner.jpeg")
     },
     {
       title: "PR Officer Leadership",
-      filePath: assetPath("/achievements/PR_officer_speakersclub.jpeg")
+      filePath: assetPath("/achievements/pr_officer_speakersclub.jpeg")
     },
     {
       title: " Speaker at Speaker's Edge",
@@ -295,7 +295,7 @@ export const portfolioData = {
     },
     {
       title: "CSA Event Management Team",
-      filePath: assetPath("/achievements/CSA_event_management.jpeg")
+      filePath: assetPath("/achievements/csa_event_management.jpeg")
     }
   ] as AchievementPhoto[]
 };
