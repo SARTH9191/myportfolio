@@ -35,7 +35,7 @@ jobs:
 
       - name: Build site
         env:
-          NEXT_PUBLIC_BASE_PATH: "/portfolio_new"
+          NEXT_PUBLIC_BASE_PATH: "/myportfolio"
         run: npm run build
 
       - name: Upload Pages artifact
